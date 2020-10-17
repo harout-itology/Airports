@@ -17,3 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/v3/users', function (Request $request) {
     return $request->user();
 });
+
+
+Route::middleware('auth:api')->post('/v3/airport', 'AirportController@airport')->name('airport');
+
+
