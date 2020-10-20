@@ -6,6 +6,10 @@ use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Http\Exceptions\HttpResponseException;
 
+/**
+ * @property mixed end_point
+ * @property mixed start_point
+ */
 class AirportCodeRequest extends FormRequest
 {
     /**
@@ -26,8 +30,8 @@ class AirportCodeRequest extends FormRequest
     public function rules()
     {
         return [
-            "startPoint" => "required|alpha|min:3|max:3",
-            "endPoint" => "required|alpha|min:3|max:3"
+            "start_point" => "required|alpha|min:3|max:3",
+            "end_point" => "required|alpha|min:3|max:3"
         ];
     }
 
